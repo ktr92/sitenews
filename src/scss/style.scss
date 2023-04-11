@@ -113,13 +113,9 @@ a.btn_border {
 
   &:hover {
     border-color: #f2ae2e;
-    background: #f2ae2e;
-    color: #ffffff;
   }
   &:focus {
     border-color: #ce8d12;
-    background: #ce8d12;
-    color: #ffffff;
   }
 }
 
@@ -626,4 +622,100 @@ h3 {
       }
     }
   }
+}
+
+.contacts__dropdown .footer__informblock {
+  width: 100%;
+}
+.textinfo__span a {
+  font-weight: bold;
+}
+.contactspopup {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 382px;
+  margin-top: 20px;
+  background: #ffffff;
+  padding: 36px;
+  z-index: 99999;
+  box-shadow: 5px 5px 60px rgba(36, 40, 43, 0.2);
+
+  .textinfo__span a {
+    color: rgba(50, 64, 100, 0.5);
+  }
+
+  .contacts__phone a {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+
+    color: #324064;
+  }
+}
+.contactspopup:after {
+  content: url(../img/triangle.svg);
+  position: absolute;
+  right: 38px;
+  top: -15px;
+}
+
+.headerpanel__callback {
+  position: relative;
+}
+
+.contacts__dropdown {
+  /*   display: none;
+ */
+  position: absolute;
+  right: 0;
+  opacity: 0;
+
+  top: calc(100% - 1px);
+  /*  width: 100%;
+  height: 310px; */
+  transition: all 0.5s 1s;
+}
+
+.headerpanel__callback:hover {
+  .contacts__dropdown {
+    display: block;
+    transition: all 0.5s;
+    z-index: 9;
+    opacity: 1;
+  }
+}
+.contacts__status {
+  width: 4px;
+  height: 4px;
+  background: #13cc88;
+  outline: 3px solid rgba(19, 204, 136, 0.3) !important;
+  margin-right: 6px;
+  border-radius: 50%;
+}
+.contacts__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 2px;
+  margin-bottom: 17px;
+}
+.contacts__text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgba(50, 64, 100, 0.5);
 }
