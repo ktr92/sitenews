@@ -385,6 +385,80 @@ ul {
   opacity: 0.5;
   color: #324064;
 }
+.pagination__arrLeft {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.pagination {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1;
+}
+.pagination > a {
+  line-height: 1;
+  display: flex;
+}
+.pagination ul {
+  display: inline-block;
+  margin: 0 22px;
+  padding: 0;
+}
+.pagination ul li {
+  float: left;
+  margin: 0 5px;
+  list-style: none;
+}
+.pagination ul li > span {
+  vertical-align: sub;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  display: block;
+  width: 36px;
+  height: 36px;
+  color: #25344f;
+}
+.pagination ul li a {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 36px;
+  /* identical to box height */
+  text-align: center;
+  color: #25344f;
+  text-align: center;
+  display: block;
+  padding: 0 4px;
+  height: 36px;
+  border: 1px solid rgba(37, 52, 79, 0.15);
+  border-radius: 12px;
+  min-width: 36px;
+}
+.pagination > span {
+  float: left;
+  display: block;
+  padding-right: 3px;
+}
+.pagination ul li.active a {
+}
+.pagination ul li a:hover {
+}
+.paginationblock {
+  padding: 24px 0;
+}
+.pagination__content {
+  margin: auto;
+}
 
 @media (max-width: 1023px) {
   .mainmenu {
