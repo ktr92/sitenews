@@ -46,7 +46,7 @@
 </head>
 
 <body>
-    <div class="jsbackdrop "></div>
+    <div class="jsbackdrop"></div>
 <div id="top"></div>
 <header id="header" class="header">
   <div class="headermain">
@@ -57,7 +57,13 @@
             <div class="logo"><a href="/"><img src="img/logo.png" alt=""></a></div>
             <div class="descr ">О вечном, бесценном, родном!</div>
           </div>
+          <a href="#" class="menubtn onlyMobile" data-menutoggle="mainmenu" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
         </div>
+
         <div class="headercontent__middle">
           <div class="headerpanel flex items-center">
             <div class="headerpanel__search">
@@ -144,10 +150,7 @@
             <!-- /.headerpanel__callback -->
           </div><!-- /.headerpanel__contacts -->
         </div>
-        <a href="#" class="menubtn onlyMobile" data-toggleclick="mainmenu" id="menuToggle">
-          <span></span>
-          <span></span>
-        </a>
+
       </div>
     </div>
 
@@ -155,7 +158,7 @@
 
   <div class="headermenu">
     <div class="container">
-      <div class="mainmenu" data-toggle="mainmenu">
+      <div class="mainmenu" data-menu="mainmenu">
         <div class="mainmenu__wrapper">
           <div class="mainmenu__items">
             <div class="mainmenu__level_1">
@@ -169,6 +172,60 @@
               </ul>
             </div>
           </div>
+          <div class="mainmenu__contacts">
+            <div class="contactspopup">
+              <div class="contactspopup__content">
+                <div class="footer__informblock">
+                  <div class="footer__contacts">
+                    <div class="contacts">
+                      <div class="contacts__phone">
+                        <a href="tel:+7 (499) 999 99 99">+7 (499) 999 99 99</a>
+                      </div>
+                      <div class="contacts__info">
+                        <div class="contacts__status"></div>
+                        <div class="contacts__text">
+                          Мы на связи
+                        </div>
+                      </div><!-- /.contacts__info -->
+                    </div>
+                  </div><!-- /.footer__phone -->
+                  <div class="footer__call">
+                    <a href="#" class=" btn_main btn_full">Обратная связь</a>
+                  </div><!-- /.footer__call -->
+                  <span class="textinfo__span"> Адрес электронной почты редакции: <a href="mailto:@mail.ru">@mail.ru</a>
+                  </span>
+                  <div class="footer__socials">
+                    <div class="socials">
+                      <div class="footer__socials">
+                        <div class="socials">
+                          <a href="" class="socials__item">
+                            <span class="socials__icon">
+                              <img src="img/WhatsApp.svg" alt="">
+                            </span>
+                          </a><!-- /.socials__item -->
+                          <a href="" class="socials__item">
+                            <span class="socials__icon">
+                              <img src="img/TelegramApp.svg" alt="">
+                            </span>
+                          </a><!-- /.socials__item -->
+                          <a href="" class="socials__item">
+                            <span class="socials__icon">
+                              <img src="img/VKontakte.svg" alt="">
+                            </span>
+                          </a><!-- /.socials__item -->
+                          <a href="" class="socials__item">
+                            <span class="socials__icon">
+                              <img src="img/Instagram.svg" alt="">
+                            </span>
+                          </a><!-- /.socials__item -->
+                        </div>
+                      </div><!-- /.footer__socials -->
+                    </div><!-- /.socials -->
+                  </div><!-- /.footer__socials -->
+                </div>
+              </div><!-- /.contactspopup__content -->
+            </div><!-- /.contactspopup -->
+          </div><!-- /.mainmenu__contacts -->
         </div>
       </div>
     </div>
@@ -289,10 +346,38 @@
         <section class="section">
           <div class="container">
             <div class="sectionwrapper">
-              <div class="newsblock">
+              <div class="newsblock newsblock_aside">
                 <div class="newsblock__main">
                   <h2>Новости</h2>
                   <div class="newsblock__list">
+                    <div class="newsblock__panel ">
+                      <div class="newstags__tags">
+                        <div class="newstags__tag"><a href="">Москва</a></div>
+                        <div class="newstags__tag"><a href="">Россия</a></div>
+                        <div class="newstags__tag"><a href="">СВО</a></div>
+                        <div class="newstags__tag"><a href="">Дети</a></div>
+                        <div class="newstags__tag"><a href="">Образование</a></div>
+                        <div class="newstags__tag"><a href="">Культура</a></div>
+                        <div class="newstags__tag"><a href="">Москва</a></div>
+                        <div class="newstags__tag"><a href="">Россия</a></div>
+                        <div class="newstags__tag"><a href="">СВО</a></div>
+                        <div class="newstags__tag"><a href="">Дети</a></div>
+                        <div class="newstags__tag"><a href="">Образование</a></div>
+                        <div class="newstags__tag"><a href="">Культура</a></div>
+                        <div class="newstags__tag"><a href="">Москва</a></div>
+                        <div class="newstags__tag"><a href="">Россия</a></div>
+                        <div class="newstags__tag"><a href="">СВО</a></div>
+                        <div class="newstags__tag"><a href="">Дети</a></div>
+                        <div class="newstags__tag"><a href="">Образование</a></div>
+                        <div class="newstags__tag"><a href="">Культура</a></div>
+                        <div class="newstags__tag"><a href="">Москва</a></div>
+                        <div class="newstags__tag"><a href="">Россия</a></div>
+                        <div class="newstags__tag"><a href="">СВО</a></div>
+                        <div class="newstags__tag"><a href="">Дети</a></div>
+                        <div class="newstags__tag"><a href="">Образование</a></div>
+                        <div class="newstags__tag"><a href="">Культура</a></div>
+                      </div><!-- /.newstags__tags -->
+                    </div><!-- /.newsblock__panel -->
                     <div class="newsblock__items">
                       <div class="newsblock__item">
                         <div class="newscard">
@@ -617,32 +702,32 @@
                   <aside>
                     <h3>Рубрики</h3>
                     <div class="newsaside">
-                      <div class="newsaside__tags">
-                        <div class="newsaside__tag"><a href="">Москва</a></div>
-                        <div class="newsaside__tag"><a href="">Россия</a></div>
-                        <div class="newsaside__tag"><a href="">СВО</a></div>
-                        <div class="newsaside__tag"><a href="">Дети</a></div>
-                        <div class="newsaside__tag"><a href="">Образование</a></div>
-                        <div class="newsaside__tag"><a href="">Культура</a></div>
-                        <div class="newsaside__tag"><a href="">Москва</a></div>
-                        <div class="newsaside__tag"><a href="">Россия</a></div>
-                        <div class="newsaside__tag"><a href="">СВО</a></div>
-                        <div class="newsaside__tag"><a href="">Дети</a></div>
-                        <div class="newsaside__tag"><a href="">Образование</a></div>
-                        <div class="newsaside__tag"><a href="">Культура</a></div>
-                        <div class="newsaside__tag"><a href="">Москва</a></div>
-                        <div class="newsaside__tag"><a href="">Россия</a></div>
-                        <div class="newsaside__tag"><a href="">СВО</a></div>
-                        <div class="newsaside__tag"><a href="">Дети</a></div>
-                        <div class="newsaside__tag"><a href="">Образование</a></div>
-                        <div class="newsaside__tag"><a href="">Культура</a></div>
-                        <div class="newsaside__tag"><a href="">Москва</a></div>
-                        <div class="newsaside__tag"><a href="">Россия</a></div>
-                        <div class="newsaside__tag"><a href="">СВО</a></div>
-                        <div class="newsaside__tag"><a href="">Дети</a></div>
-                        <div class="newsaside__tag"><a href="">Образование</a></div>
-                        <div class="newsaside__tag"><a href="">Культура</a></div>
-                      </div><!-- /.newsaside__tags -->
+                      <div class="newstags__tags ">
+                        <div class="newstags__tag"><a href="">Москва</a></div>
+                        <div class="newstags__tag"><a href="">Россия</a></div>
+                        <div class="newstags__tag"><a href="">СВО</a></div>
+                        <div class="newstags__tag"><a href="">Дети</a></div>
+                        <div class="newstags__tag"><a href="">Образование</a></div>
+                        <div class="newstags__tag"><a href="">Культура</a></div>
+                        <div class="newstags__tag"><a href="">Москва</a></div>
+                        <div class="newstags__tag"><a href="">Россия</a></div>
+                        <div class="newstags__tag"><a href="">СВО</a></div>
+                        <div class="newstags__tag"><a href="">Дети</a></div>
+                        <div class="newstags__tag"><a href="">Образование</a></div>
+                        <div class="newstags__tag"><a href="">Культура</a></div>
+                        <div class="newstags__tag"><a href="">Москва</a></div>
+                        <div class="newstags__tag"><a href="">Россия</a></div>
+                        <div class="newstags__tag"><a href="">СВО</a></div>
+                        <div class="newstags__tag"><a href="">Дети</a></div>
+                        <div class="newstags__tag"><a href="">Образование</a></div>
+                        <div class="newstags__tag"><a href="">Культура</a></div>
+                        <div class="newstags__tag"><a href="">Москва</a></div>
+                        <div class="newstags__tag"><a href="">Россия</a></div>
+                        <div class="newstags__tag"><a href="">СВО</a></div>
+                        <div class="newstags__tag"><a href="">Дети</a></div>
+                        <div class="newstags__tag"><a href="">Образование</a></div>
+                        <div class="newstags__tag"><a href="">Культура</a></div>
+                      </div><!-- /.newstags__tags -->
 
                       <div class="newsaside__banner">
                         <div class="banner">

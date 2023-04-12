@@ -46,3 +46,11 @@
     }
   }
 }
+
+@mixin colstorows {
+  flex-wrap: wrap;
+
+  > * {
+    width: 100%;
+  }
+}
