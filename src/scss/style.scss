@@ -255,15 +255,20 @@ a.btn_border {
   width: 561px;
   display: flex;
   min-height: 446px;
-  .slick-list {
-    height: 100% !important;
+}
+
+@media (min-width: 1024px) {
+  .mainblocknav .slick-list {
+    overflow: visible;
   }
-}
-.mainblocknav .slick-track {
-  transform: translate3d(0px, 0px, 0px) !important;
-}
-.mainblocknav .slick-list {
-  overflow: visible;
+  .mainblocknav .slick-track {
+    transform: translate3d(0px, 0px, 0px) !important;
+  }
+  .mainblocknav {
+    .slick-list {
+      height: 100% !important;
+    }
+  }
 }
 
 .mainblocknav__slider {
@@ -825,6 +830,9 @@ main {
     display: none;
   }
 }
+.mainmenu__contacts {
+  display: none;
+}
 @media (max-width: 1480px) {
   .headersearch input {
     width: 300px;
@@ -874,6 +882,7 @@ main {
   .sectionwrapper {
     padding: 15px 18px;
     margin: 10px -18px;
+    @include fullwidth;
   }
   .newsblock {
     display: block;
@@ -952,10 +961,9 @@ main {
     align-items: center;
   }
   .headercontent__middle {
-    margin: 0 -15px;
     border-top: 2px solid rgba(50, 64, 100, 0.1);
     padding-top: 9px;
-    width: calc(100% + 30px);
+    @include fullwidth;
   }
   .headerpanel__search {
     width: 100%;
@@ -995,6 +1003,150 @@ main {
     padding: 40px 18px;
   }
 
+  h2 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 12px;
+  }
+
+  .mainblocknav {
+    min-height: initial;
+  }
+  .mainblocknav__slide.slick-slide.slick-current .mainblocknav__content:before,
+  .mainblocknav__slide.slick-slide.slick-current .mainblocknav__content:after,
+  .mainblocknav__slide.slick-slide.slick-current .mainblocknav__item:after {
+    display: none;
+  }
+  .container {
+    max-width: 100%;
+  }
+  .mainblocknav {
+    display: block;
+  }
+  .mainblockslider {
+    display: block;
+    margin: 0 -18px;
+    width: calc(100% + 36px);
+  }
+  .mainblocknav__content {
+    padding: 0;
+    height: unset;
+  }
+  .mainblocknav__content span {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 110%;
+    padding: 0;
+    border: none;
+  }
+  .mainblocknav {
+    padding-top: 23px;
+  }
+  .slick-dots li button {
+    background: rgba(50, 64, 100, 0.1);
+    width: 43px;
+    height: 3px;
+    padding: 0;
+  }
+  .slick-dots li.slick-active button {
+    background: rgba(224, 149, 8, 1);
+  }
+  .slick-dots li {
+    margin: 0 3px;
+    width: unset;
+    height: unset;
+    margin-right: 3px;
+  }
+  .slick-dots li button:before {
+    display: none;
+  }
+  .newstags__tags {
+    background: #fafafa;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 15px 27px;
+    overflow-x: auto;
+    margin: 18px 0;
+    @include fullwidth;
+    .newstags__tag {
+      margin-bottom: 0;
+
+      a {
+        margin-right: 16px;
+        font-size: 14px;
+        line-height: 110%;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .newsblock__list {
+    margin: 7px 0;
+  }
+  .newsblock__panel {
+  }
+  main {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .newscard__content {
+    padding: 0 18px;
+  }
+  .newscard__image {
+    margin-bottom: 19px;
+  }
+  .newscard__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 110%;
+    min-height: 30px;
+  }
+  .newscard__param {
+    font-size: 12px;
+  }
+  .newscard {
+    border-bottom: none;
+    padding-bottom: 29px;
+  }
+  .newsblock__item {
+    margin-bottom: 0;
+  }
+  .showmore a {
+    height: 58px;
+    font-size: 14px;
+    span {
+      line-height: 1;
+      display: block;
+    }
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+  #footer {
+    margin-top: 14px;
+  }
+  .footer__socials {
+    margin: 35px 0;
+  }
+  .footermenu__title {
+    font-size: 16px;
+    line-height: 110%;
+    margin-bottom: 13px;
+  }
+  .footermenu__menu ul li a {
+    font-size: 12px;
+  }
+  .footermenublock__menu {
+    margin-left: 56px;
+  }
+  .headercontent__left {
+    justify-content: space-between;
+  }
+  .mainmenu__contacts {
+    display: block;
+  }
+
   .mainmenu__contacts {
     .contactspopup {
       margin-top: 52px;
@@ -1031,10 +1183,18 @@ main {
         color: #e09508;
       }
     }
+
     .socials__item {
       width: 40px;
       height: 40px;
       padding: 7px;
     }
+  }
+}
+
+@media (max-width: 500px) {
+  .newsblock__item {
+    width: 100%;
+    @include fullwidth;
   }
 }
