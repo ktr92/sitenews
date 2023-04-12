@@ -1,0 +1,161 @@
+<% var data={ title: "MAIN" , author: "" }; %>
+  <%= _.template(require('../includes/head.html').default)(data) %>
+    <%= _.template(require('../includes/header.html').default)(data) %>
+      <main>
+        <section class="section">
+          <div class="container">
+            <div class="sectionwrapper">
+              <div class="pageheader">
+                <div class="breadcrumbs">
+                  <div class="breadcrumbs__items">
+                    <ul>
+                      <li>
+                        <a href="/"><span>Наши ценности</span></a>
+                      </li>
+                      <li>
+                        <span>О проекте</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!-- /.pageheader -->
+              <div class="sectiontitle">
+                <h2>О проекте</h2>
+              </div>
+              <div class="content">
+                <div class="content__block">
+                  <h1>Заголовок H1</h1>
+                  <h2>Заголовок H2</h2>
+                  <h3>Заголовок H3</h3>
+                  <h4>Заголовок H4</h4>
+                  <h5>Заголовок H5</h5>
+                </div>
+                <div class="content__block">
+                  <div class="content__title">
+                    Текст и ссылка в тексте
+                  </div><!-- /.text__title -->
+
+                  <p>Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей
+                    деятельности позволяет выполнять важные задания по разработке новых предложений. Идейные
+                    соображения
+                    высшего порядка, а также укрепление и развитие структуры влечет за собой процесс внедрения и
+                    модернизации существенных финансовых и административных условий. Идейные соображения высшего
+                    порядка, а также постоянный количественный рост и сфера нашей активности играет важную роль в
+                    формировании новых предложений. </p>
+                </div>
+
+                <div class="content__block">
+                  <div class="content__title">
+                    Список
+                  </div><!-- /.text__title -->
+
+                  <ul>
+                    <li>Текст</li>
+                    <li>Текст</li>
+                    <li>Текст</li>
+                    <li>Текст</li>
+                    <li>Текст</li>
+                  </ul>
+                </div>
+
+                <div class="content__block">
+                  <div class="content__title">
+                    Абзац в тексте
+                  </div>
+
+                  <blockquote>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.
+                  </blockquote>
+
+                  <p>Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей
+                    деятельности позволяет выполнять важные задания по разработке новых предложений. Идейные
+                    соображения высшего порядка, а также укрепление и развитие структуры влечет за собой процесс
+                    внедрения и модернизации существенных финансовых и административных условий. Идейные соображения
+                    высшего порядка, а также постоянный количественный рост и сфера нашей активности играет важную
+                    роль в формировании новых предложений. </p>
+                </div>
+
+                <div class="content__block">
+                  <div class="content__title">
+                    Таблица
+                  </div>
+                  <div class="tablewrapper">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Заголовок</th>
+                          <th>Заголовок</th>
+                          <th>Заголовок</th>
+                          <th>Заголовок</th>
+                          <th>Заголовок</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                        </tr>
+                        <tr>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                        </tr>
+                        <tr>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                        </tr>
+                        <tr>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                        </tr>
+                        <tr>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                        </tr>
+                        <tr>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                        </tr>
+                        <tr>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                          <td>Текст</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+
+
+
+            </div>
+          </div>
+        </section>
+
+
+      </main>
+      <%= _.template(require('../includes/footer.html').default)(data) %>

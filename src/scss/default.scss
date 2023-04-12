@@ -7,7 +7,6 @@ body {
   font-weight: normal;
   @include clear;
   scroll-behavior: smooth;
-  color: $textcolor;
   overflow-x: hidden;
   width: 100%;
 }
@@ -336,6 +335,55 @@ ul {
 
 #menuToggle.active span:nth-child(2) {
   opacity: 0;
+}
+
+.breadcrumbs {
+  margin: 4px 0 20px 0;
+}
+
+.breadcrumbs__items ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.breadcrumbs__items ul li {
+  position: relative;
+  padding-right: 16px;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.breadcrumbs__items ul li:after {
+  content: url(../img/breadcrumbs.svg);
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 16px;
+  color: rgba(37, 52, 79, 0.5);
+}
+
+.breadcrumbs__items ul li:last-child:after {
+  display: none;
+}
+
+.breadcrumbs__items ul span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+
+  display: flex;
+  align-items: center;
+
+  color: #324064;
+}
+
+.breadcrumbs__items ul a span {
+  opacity: 0.5;
+  color: #324064;
 }
 
 @media (max-width: 1023px) {
