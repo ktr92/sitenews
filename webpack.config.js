@@ -1,32 +1,29 @@
-const path = require("path");
-const fs = require("fs");
-var webpack = require('webpack');
-const {
-  CleanWebpackPlugin
-} = require("clean-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
-const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
-
+const path = require("path")
+const fs = require("fs")
+var webpack = require("webpack")
+const { CleanWebpackPlugin } = require("clean-webpack-plugin")
+const CopyPlugin = require("copy-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
+const TerserPlugin = require("terser-webpack-plugin")
+const HtmlWebpackInlineSVGPlugin = require("html-webpack-inline-svg-plugin")
 
 function generateHtmlPlugins(templateDir) {
-  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir))
   return templateFiles.map((item) => {
-    const parts = item.split(".");
-    const name = parts[0];
-    const extension = parts[1];
+    const parts = item.split(".")
+    const name = parts[0]
+    const extension = parts[1]
     return new HtmlWebpackPlugin({
       filename: `${name}.html`,
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
       inject: false,
-    });
-  });
+    })
+  })
 }
 
-const htmlPlugins = generateHtmlPlugins("./src/html/views");
+const htmlPlugins = generateHtmlPlugins("./src/html/views")
 
 const config = {
   entry: ["./src/js/index.js", "./src/scss/style.scss"],
@@ -37,7 +34,7 @@ const config = {
   devtool: "source-map",
   mode: "production",
   optimization: {
-    minimize: true,
+    minimize: false,
     minimizer: [
       new CssMinimizerPlugin({
         minimizerOptions: {
@@ -45,7 +42,7 @@ const config = {
             "default",
             {
               discardComments: {
-                removeAll: true
+                removeAll: true,
               },
             },
           ],
@@ -57,10 +54,12 @@ const config = {
     ],
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.(sass|scss)$/,
         include: path.resolve(__dirname, "src/scss"),
-        use: [{
+        use: [
+          {
             loader: MiniCssExtractPlugin.loader,
             options: {},
           },
@@ -92,12 +91,13 @@ const config = {
        jQuery: 'jquery',
        'window.jQuery': 'jquery'
      }), */
-     new HtmlWebpackInlineSVGPlugin(),
+    new HtmlWebpackInlineSVGPlugin(),
     new MiniCssExtractPlugin({
       filename: "./css/style.bundle.css",
     }),
     new CopyPlugin({
-      patterns: [{
+      patterns: [
+        {
           from: "./src/fonts",
           to: "./fonts",
         },
@@ -116,16 +116,15 @@ const config = {
         {
           from: "./src/css",
           to: "./css",
-        }
-
+        },
       ],
     }),
   ].concat(htmlPlugins),
-};
+}
 
 module.exports = (env, argv) => {
   if (argv.mode === "production") {
-    config.plugins.push(new CleanWebpackPlugin());
+    config.plugins.push(new CleanWebpackPlugin())
   }
-  return config;
-};
+  return config
+}

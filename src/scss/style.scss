@@ -66,6 +66,7 @@ body {
   color: #ffffff;
   border: none;
   cursor: pointer;
+  display: inline-block;
 
   &:hover {
     background: #f2ae2e;
@@ -1270,6 +1271,78 @@ tbody {
   }
 }
 
+.errorpage__content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  padding: 105px 0 65px 0;
+}
+
+.errorpage__code svg {
+  max-width: 320px;
+}
+
+.errorpage__code svg path {
+  fill: #242a72;
+}
+
+.errorpage__code {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 305px;
+  line-height: 100%;
+  /* identical to box height, or 305px */
+
+  color: rgba(50, 64, 100, 0.1);
+}
+
+.errorpage__info {
+  text-align: center;
+}
+
+.errorpage__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  /* identical to box height, or 32px */
+
+  color: #324064;
+  @include titleborder;
+}
+
+.errorpage__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  margin-bottom: 33px;
+  text-align: left;
+  color: rgba(50, 64, 100, 0.7);
+  max-width: 338px;
+}
+
+.errorpage .container {
+  height: 100%;
+}
+.errorpage__home {
+  text-align: left;
+}
+.errorpage__home .btn_main {
+  text-transform: uppercase;
+  height: 60px;
+  padding: 0 57px;
+  line-height: 60px;
+}
+
+.sectionwrapper_type2 {
+  margin: 43px 0;
+}
+.errorpage__code {
+  padding: 0 30px;
+}
+
 @media (max-width: 1480px) {
   .headersearch input {
     width: 300px;
@@ -1305,6 +1378,11 @@ tbody {
 }
 
 @media (max-width: 1023px) {
+  .errorpage__code {
+    font-size: 142px;
+    margin-bottom: 5px;
+  }
+
   .textinfo__text,
   .textinfo a {
     font-weight: 400;
@@ -1896,7 +1974,10 @@ tbody {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+  .errorpage__code {
+    font-size: 142px;
+  }
   .newsblock__item {
     width: 100%;
     @include fullwidth;
@@ -1920,5 +2001,33 @@ tbody {
       padding: 0 4px;
       margin: 0 0 14px 0;
     }
+  }
+  .errorpage__content {
+    flex-wrap: wrap;
+    padding: 18px 0;
+  }
+  .errorpage__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    padding-bottom: 19px;
+    margin-bottom: 22px;
+    &:after {
+      width: 43px;
+      height: 4px;
+    }
+  }
+  .errorpage__text {
+    margin-bottom: 21px;
+    font-size: 14px;
+    line-height: 140%;
+  }
+  .errorpage__home .btn_main {
+    width: 100%;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
   }
 }

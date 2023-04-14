@@ -60,3 +60,20 @@
   margin-left: -18px;
   margin-right: -18px;
 }
+
+@mixin titleborder($mb: 41px, $pb: 28px, $w: 50px, $h: 5px, $color: $main) {
+  position: relative;
+  padding-bottom: $pb;
+  margin-bottom: $mb;
+  text-align: left;
+  &:after {
+    content: "";
+    width: $w;
+    height: $h;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background: $color;
+  }
+}
