@@ -1343,16 +1343,304 @@ tbody {
   padding: 0 30px;
 }
 
+.contactsblock {
+  margin-top: 64px;
+}
+.contactsblock__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.contactsblock__content {
+  padding-right: 30px;
+}
+.contactsblock__title {
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 53px;
+  /* identical to box height */
+  margin-top: 15px;
+  color: #324064;
+}
+.contactsblock__params {
+}
+.contactsblock__param {
+  margin-bottom: 12px;
+}
+.contactitem {
+  display: flex;
+  align-items: center;
+}
+.contactitem__icon {
+  margin-right: 15px;
+}
+.contactitem__img {
+}
+.contactitem__main {
+}
+.contactitem__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+  /* identical to box height, or 18px */
+
+  color: rgba(50, 64, 100, 0.5);
+  margin-bottom: 2px;
+}
+.contactitem__value {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 110%;
+  /* identical to box height, or 18px */
+
+  color: #324064;
+  a {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 110%;
+    /* identical to box height, or 18px */
+    display: block;
+    color: #324064;
+  }
+}
+.contactsblock__map {
+  width: calc(100% - 400px);
+}
+
+.contacsblock__socials {
+  margin-top: 21px;
+  .socials__item {
+    height: 46px;
+    width: 46px;
+    margin-right: 8px;
+    padding: 8px;
+  }
+}
+
+.pageform__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  /* identical to box height, or 32px */
+
+  color: #324064;
+  @include titleborder;
+}
+
+.check label {
+  cursor: pointer;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 110%;
+  /* or 15px */
+
+  color: #324064;
+  padding-left: 38px;
+  position: relative;
+}
+
+.check input[type="checkbox"] {
+  display: none;
+}
+
+.check label a {
+  color: #25344f;
+  text-decoration: underline;
+}
+
+.check label a:hover {
+  text-decoration: none;
+}
+
+.check label:before {
+  background-color: rgba(224, 149, 8, 1);
+  border-radius: 4px;
+  content: "";
+  height: 18px;
+  left: 0;
+  position: absolute;
+  width: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.check input[type="checkbox"]:checked + label:before {
+  background-image: url(../img/checkbox_checked.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pageform {
+  background: #f5f5f5;
+  box-shadow: 8px 8px 40px rgba(49, 51, 56, 0.15);
+  margin: 60px 0;
+}
+.pageform__wrapper {
+  display: flex;
+}
+.pageform__block {
+  position: relative;
+  background: #fff;
+  width: calc(100% - 760px);
+  min-width: 500px;
+
+  &:after {
+    content: "";
+    background: #f5f5f5;
+    height: 100%;
+    width: 48px;
+    transform: skewX(6deg);
+    transform-origin: top left;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    right: 0;
+  }
+}
+.pageform__block_layer {
+  position: relative;
+  height: 100%;
+
+  padding: 67px 50px 53px 60px;
+}
+
+.pageform__block_layer:after {
+  content: "";
+  background: rgba(224, 149, 8, 1);
+  height: 100%;
+  width: 12px;
+  transform: skewX(6deg);
+  transform-origin: top left;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  right: 48px;
+}
+
+.pageform__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 338px;
+}
+
+.pageform__title {
+}
+.pageform__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: rgba(50, 64, 100, 0.7);
+}
+.pageform__form {
+  min-height: 457px;
+  background: #f5f5f5;
+  padding-left: 66px;
+  padding: 46px 50px 46px 70px;
+}
+.pageform__main {
+}
+.pageform__rows {
+}
+.pageform__row {
+  display: flex;
+  align-items: center;
+  margin: 0 -10px;
+}
+.pageform__col_full {
+  width: 100%;
+  padding: 0 10px;
+}
+.pageform__input {
+  padding-bottom: 18px;
+  position: relative;
+  label {
+    color: rgba(50, 64, 100, 0.5);
+    margin-bottom: 7px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+input {
+  height: 50px;
+  padding: 10px 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+  display: block;
+  color: #324064;
+  background: #ffffff;
+  border: 2px solid rgba(50, 64, 100, 0.1);
+  display: block;
+  width: 100%;
+  &:focus {
+    border-color: #e09508;
+  }
+}
+
+.pageform__col {
+  width: 50%;
+  padding: 0 10px;
+}
+.input-errortext {
+}
+.pageform__buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 13px;
+
+  .btn_main {
+    text-transform: uppercase;
+    height: 60px;
+    padding: 0 57px;
+    line-height: 60px;
+    width: 234px;
+  }
+}
+.formblock__check {
+  padding-right: 27px;
+}
+.check {
+}
+.pageform__submit {
+}
+
 @media (max-width: 1480px) {
+  .pageform__block {
+    min-width: 350px;
+  }
+  .pageform__form {
+    padding-left: 30px;
+  }
+  .pageform__block_layer {
+    padding: 50px 30px;
+  }
+
   .headersearch input {
     width: 300px;
   }
-  .mainblockslider {
+  /*  .mainblockslider {
     width: calc(100% - 400px);
   }
   .mainblocknav {
     width: 400px;
-  }
+  } */
   .sectionwrapper {
     padding: 30px 20px;
   }
@@ -1377,7 +1665,67 @@ tbody {
   }
 }
 
+@media (max-width: 1280px) {
+  .mainblockslider {
+    width: calc(100% - 400px);
+  }
+  .mainblocknav {
+    width: 400px;
+  }
+}
+
 @media (max-width: 1023px) {
+  .contactsblock {
+    margin-top: 0;
+  }
+  .contactsblock__title {
+    font-size: 22px;
+    line-height: 32px;
+    margin: 0 0 12px 0;
+  }
+  .contactitem__title {
+    font-size: 12px;
+    line-height: 110%;
+    margin-bottom: 5px;
+  }
+  .contacsblock__socials {
+    margin-top: 18px;
+    .footer__socials {
+      margin: 0;
+    }
+  }
+  .contactsblock__content {
+    padding-right: 0;
+    margin-bottom: 24px;
+  }
+  .contactsblock__wrapper {
+    flex-wrap: wrap;
+  }
+  .contactsblock__map {
+    width: 100%;
+    @include fullwidth;
+    iframe {
+      height: 308px;
+    }
+  }
+  .pageform__wrapper {
+    display: block;
+  }
+  .pageform__block {
+    width: 100%;
+    min-width: unset;
+  }
+  .pageform__form {
+    min-height: initial;
+    padding-left: 0;
+    padding-top: 21px;
+  }
+
+  .contactitem__value a {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 110%;
+  }
   .errorpage__code {
     font-size: 142px;
     margin-bottom: 5px;
@@ -1971,6 +2319,90 @@ tbody {
   .asideblock__news .newsblock__items {
     @include fullwidth;
     margin: 0;
+  }
+  .pageform__buttons {
+    flex-wrap: wrap;
+  }
+  .formblock__check {
+    width: 100%;
+  }
+  .pageform__submit {
+    order: -1;
+    margin-bottom: 15px;
+  }
+  .pageform__block_layer {
+    padding: 22px 16px 40px 16px;
+  }
+  .pageform__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    padding-bottom: 16px;
+    margin-bottom: 13px;
+    &:after {
+      width: 34px;
+      height: 3px;
+    }
+  }
+  .pageform__block_layer {
+    &:after {
+      width: 100%;
+      height: 5px;
+      left: 0;
+      bottom: 0;
+      top: unset;
+      transform: skewY(-6deg);
+    }
+  }
+  .pageform {
+    max-width: 284px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pageform__block:after {
+    width: 100%;
+    height: 36px;
+    left: 0;
+    bottom: -36px;
+    top: unset;
+    transform: skewY(-6deg);
+  }
+  .pageform__text {
+    font-size: 14px;
+    line-height: 140%;
+  }
+  .pageform__form {
+    padding: 22px 16px;
+  }
+  .pageform__input label {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 4px;
+  }
+  input {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 14px;
+  }
+  .pageform__row {
+    flex-wrap: wrap;
+  }
+  .pageform__col {
+    width: 100%;
+  }
+  .pageform__input {
+    padding-bottom: 12px;
+  }
+  .pageform__buttons .btn_main {
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+  }
+  .check label {
+    font-size: 12px;
+    line-height: 110%;
+    padding-left: 29px;
   }
 }
 

@@ -1,1 +1,9 @@
-@font-face{font-display:swap;font-family:SharonAP;font-style:normal;font-weight:400;src:url(SharonAP.woff2) format("woff2"),url(SharonAP.woff) format("woff")}
+@font-face {
+    font-family: 'SharonAP';
+    src: url('SharonAP.woff2') format('woff2'),
+        url('SharonAP.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
